@@ -1,3 +1,4 @@
+
 const yourResult = document.querySelector('.result_human')
 const iaResult = document.querySelector('.result_ia')
 const iachoice = ["IA escolheu Papel", "IA escolheu Pedra", "IA escolheu Tesoura"]
