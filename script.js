@@ -1,6 +1,11 @@
-const yourResult = document.querySelector('.your_point').value
-const iaRresult = document.querySelector('.IA-point').value
-const iachoice = ["Pedra", "Papel", "Tesoura"]
+const yourResult = document.querySelector('.result_human')
+const iaResult = document.querySelector('.result_ia')
+const iachoice = ["IA escolheu Papel", "IA escolheu Pedra", "IA escolheu Tesoura"]
+const resultado = document.querySelector('.result')
+
+let yourPoint = 0
+let iaPoint = 0
+
 
 function iaPlay(iachoice) {
     const iaRandom = Math.floor(Math.random() * iachoice.length);
@@ -8,44 +13,61 @@ function iaPlay(iachoice) {
 }
 
 function clickPapel() {
-    console.log("Você clicou no Papel")
-    console.log(iaPlay(iachoice))
-    if (iaPlay(iachoice) === "IA escolheu Pedra") {
-        console.log("você ganhou")
+    console.log("Você escolheu Papel")
+    const iaescolha = iaPlay(iachoice);
+    console.log(iaescolha);
 
-    } else if (iaPlay(iachoice) === "IA escolheu Papel") {
-        console.log("empate")
-
-    } else {
-        console.log("você perdeu")
+    if (iaescolha === "IA escolheu Pedra") {
+        yourPoint++
+        yourResult.innerHTML = yourPoint
+        resultado.innerHTML = "você ganhou"
+    }
+    if (iaescolha === "IA escolheu Papel") {
+        resultado.innerHTML = "empate"
+    }
+    if (iaescolha === "IA escolheu Tesoura") {
+        iaPoint++
+        iaResult.innerHTML = iaPoint
+        resultado.innerHTML = "você perdeu"
     }
 }
 
-
 function clickPedra() {
-    console.log("Você clicou na Pedra")
-    console.log(iaPlay(iachoice))
-    if (iaPlay(iachoice) === "IA escolheu Tesoura") {
-        console.log("você ganhou")
+    console.log("Você escolheu Pedra")
+    const iaescolha = iaPlay(iachoice);
+    console.log(iaescolha)
 
-    } else if (iaPlay(iachoice) === "IA escolheu Pedra") {
-        console.log("empate")
-
-    } else {
-        console.log("você perdeu")
+    if (iaescolha === "IA escolheu Tesoura") {
+        yourPoint++
+        yourResult.innerHTML = yourPoint
+        resultado.innerHTML = "você ganhou"
+    }
+    if (iaescolha === "IA escolheu Pedra") {
+        resultado.innerHTML = "empate"
+    }
+    if (iaescolha === "IA escolheu Papel") {
+        iaPoint++
+        iaResult.innerHTML = iaPoint
+        resultado.innerHTML = "você perdeu"
     }
 }
 
 function clickTesoura() {
-    console.log("Você clicou na Tesoura")
-    console.log(iaPlay(iachoice))
-    if (iaPlay(iachoice) === "IA escolheu Papel") {
-        console.log("você ganhou")
+    console.log("Você escolheu Tesoura")
+    const iaescolha = iaPlay(iachoice);
+    console.log(iaescolha)
 
-    } else if (iaPlay(iachoice) === "IA escolheu Tesoura") {
-        console.log("empate")
-
-    } else {
-        console.log("você perdeu")
+    if (iaescolha === "IA escolheu Papel") {
+        yourPoint++
+        yourResult.innerHTML = yourPoint
+        resultado.innerHTML = "você ganhou"
+    }
+    if (iaescolha === "IA escolheu Tesoura") {
+        resultado.innerHTML = "empate"
+    }
+    if (iaescolha === "IA escolheu Pedra") {
+        iaPoint++
+        iaResult.innerHTML = iaPoint
+        resultado.innerHTML = "você perdeu"
     }
 }

@@ -566,13 +566,14 @@ button {
 
 .buttons {
     text-shadow: 1px 1px 2px rgb(176, 176, 176);
-    margin: 20px 0;
+    margin: 7px 0;
     display: flex;
     gap: 20px;
 }
 
 .your_point {
-    margin-bottom: 10px;
+    margin-top: 8px;
+    margin-bottom: 2px;
 }
 
 .your_point span {
@@ -627,4 +628,9 @@ h1 {
 
 #Tesoura:hover {
     opacity: 0.7;
+}
+
+.result {
+    font-size: 30px;
+
 }
