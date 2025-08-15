@@ -1,6 +1,6 @@
 const yourResult = document.querySelector('.your_point').value
 const iaRresult = document.querySelector('.IA-point').value
-const iachoice = ["Pedra", "Papel", "Tesoura"]
+const iachoice = ["IA escolheu a Pedra", "IA escolheu o Papel", "IA escolheu a Tesoura"]
 
 function iaPlay(iachoice) {
     const iaRandom = Math.floor(Math.random() * iachoice.length);
